@@ -38,7 +38,7 @@ nix run github:szyroi/nix-db-main
 
 Install globally
 ```bash
-nix profile add github:szyroi/db-main-nix
+nix profile add github:szyroi/nix-db-main
 ```
 Afterwards, just type `db-main` in the terminal.
 
