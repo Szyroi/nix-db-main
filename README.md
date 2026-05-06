@@ -2,6 +2,17 @@
 
 Run the proprietary [DB‑Main](https://www.db-main.eu) modeling tool on NixOS with zero manual setup the Nix way.
 
+## ⚠️ Important - License acceptance
+
+By downloading and using this wrapper (which automatically fetches DB‑Main from the official site), you agree to the following clauses provided by the University of Namur:
+
+> - DB‑MAIN can not be redistributed to third parties.
+> - The University of Namur declines any responsibility for the installation, use or uninstallation of DB‑Main.
+> - The University of Namur is the exclusive owner of the DB‑Main software.
+
+This wrapper **does not redistribute** DB‑Main. It only downloads the official tarball from the university’s server. You must accept the license terms of DB‑Main itself.
+
+
 ## ✨ Features
 
 - **One‑command install** – `nix run github:szyroi/nix-db-main`
@@ -52,3 +63,7 @@ nix-prefetch-url --unpack <new-url>
 export GDK_BACKEND=x11
 db-main
 ```
+## 📄 License
+
+Wrapper code: MIT.
+DB‑Main: proprietary software - by using this wrapper you agree to the license terms of the University of Namur (see above). This wrapper does not redistribute DB‑Main. it only automates downloading from the official source.
