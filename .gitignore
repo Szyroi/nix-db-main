@@ -1,0 +1,4 @@
+result
+/nix/store
+flake.lock
+.DS_Store
