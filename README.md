@@ -31,15 +31,23 @@ nixpkgs.config.allowUnfree = true;
 ```
 
 ## 🚀 Installation & usage
-Run directly (without installing)
+### Run directly (without installing)
 ```bash
-nix run github:szyroi/nix-db-main
+nix run github:szyroi/nix-db-main --no-write-lock-file
 ```
 
-Install globally
+### Install globally
 ```bash
-nix profile add github:szyroi/nix-db-main
+nix profile add github:szyroi/nix-db-main --no-write-lock-file
 ```
+
+### Clone the repository locally and install from the local path
+```bash
+git clone https://github.com/szyroi/nix-db-main
+cd nix-db-main
+nix profile add .
+```
+
 Afterwards, just type `db-main` in the terminal.
 
 ## 🔧 Troubleshooting
