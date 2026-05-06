@@ -31,15 +31,6 @@ nixpkgs.config.allowUnfree = true;
 ```
 
 ## 🚀 Installation & usage
-### Run directly (without installing)
-```bash
-nix run github:szyroi/nix-db-main --no-write-lock-file
-```
-
-### Install globally
-```bash
-nix profile add github:szyroi/nix-db-main --no-write-lock-file
-```
 
 ### Clone the repository locally and install from the local path
 ```bash
@@ -48,13 +39,23 @@ cd nix-db-main
 nix profile add .
 ```
 
+### Install globally
+```bash
+nix profile add github:szyroi/nix-db-main --no-write-lock-file
+```
+
+### Run directly (without installing)
+```bash
+nix run github:szyroi/nix-db-main --no-write-lock-file
+```
+
 Afterwards, just type `db-main` in the terminal.
 
 ## 🔧 Troubleshooting
 
 ### Missing libraries
 
-If you see an error like libXYZ.so: cannot open shared object file, the wrapper already includes a comprehensive set of libraries. Please open an issue with the exact error message and I will add the missing package.
+If you see an error like `libXYZ.so: cannot open shared object file`, the wrapper already includes a comprehensive set of libraries. Please open an issue with the exact error message and I will add the missing package.
 
 ### Tarball download fails
 
@@ -71,7 +72,20 @@ nix-prefetch-url --unpack <new-url>
 export GDK_BACKEND=x11
 db-main
 ```
-## 📄 License
 
+### No such file or directory
+```bash
+/init: line 11: /home/szyroi/db-main/bin/db_main: No such file or directory
+```
+Just add the nix profile.
+```bash
+nix profile add github:szyroi/nix-db-main --no-write-lock-file
+```
+With `nix profile list` you can see all installed nix profiles.
+
+To remove the profile use `nix profile remove nix-db-main`.
+
+## 📄 License
 Wrapper code: MIT.
+
 DB‑Main: proprietary software - by using this wrapper you agree to the license terms of the University of Namur (see above). This wrapper does not redistribute DB‑Main. it only automates downloading from the official source.
