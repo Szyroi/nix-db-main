@@ -5,6 +5,6 @@ Run DB‑MAIN on NixOS without manual setup.
 ## Usage
 
 ```bash
-nix run github:yourusername/db-main-wrapper
+nix run github:szyroi/db-main-wrapper
 
 ```
